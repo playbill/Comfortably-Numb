@@ -65,7 +65,7 @@ class Pile{
             * \param e l'élément à empiler
             * \return : élement dépilé
             */
-            Element& depilerElement();
+            Element* depilerElement();
 
              /**
             * \fn  void swap(const unsigned int x,const unsigned int y)

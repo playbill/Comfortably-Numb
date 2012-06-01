@@ -66,9 +66,10 @@ void Pile::empilerElement(Element * e){
 * \param e l'élément à empiler
 * \return : élement dépilé
 */
-Element& Pile::depilerElement(){
+Element* Pile::depilerElement(){
     if(!pile->isEmpty())
-        return *(pile->pop());
+        return pile->pop();
+        return 0;
 }
 
  /**
@@ -95,8 +96,8 @@ void Pile::swap(const unsigned int x,const unsigned int y){
 /** Sum dépend du mode dans lequel est configurée la calculatrice
   On implémentera cette fonction dans la classe Calculateur
 void Pile::sum(unsigned int x){
-  QVectorIterator<Element*> i(*pile);/*!< Implémentation de QVectorIterator */
-  /*!< On parcours toutes la pile \todo modifié pour ne prendre que les x premier éléments
+  QVectorIterator<Element*> i(*pile);!< Implémentation de QVectorIterator
+  !< On parcours toutes la pile \todo modifié pour ne prendre que les x premier éléments
   if(Element* sum;
   do{   
    sum = sum + *(i.next());
@@ -105,13 +106,13 @@ void Pile::sum(unsigned int x){
 */
 /** Mean dépend du mode dans lequel est configurée la calculatrice
   On implémentera cete fonction dans la classe Calculateur
- /**
+
 * \fn void mean(unsigned int x)
 * \brief Fonction : moyenne des x premiers éléments de la pile
 * \param x le nombre d'élements depuis le haut de la pile sur lesquels on fait la moyenne
 
 void Pile::mean(unsigned int x){
-    /* \todo implémenter la fonction mean
+     \todo implémenter la fonction mean
 }
 */
 /**
@@ -127,7 +128,10 @@ pile->clear();
 * \brief Fonction : duplique le premier élément de la pile
 */
 void Pile::dup(){
-/* \todo implémenter la fonction dup */
+if(!pile->isEmpty()){
+Element* e= *(new Element*(pile->top()));/*!< on crée dynamyquement un pointeur d'élément */
+pile->push(e); /*!< on le met sur le haut de la pile */
+}
 }
 
 /**
