@@ -50,7 +50,7 @@ void Pile::libereInstance(){
 * \brief Fonction :  récupère un pointeur sur le haut de la pile
 * \return : pointeur vers la pile
 */
-QStack<Element*> Pile::getPile()const{return *pile;}
+QStack<Element*> Pile::getPile()const{return *pile;}// /todo à remplacer par une fonction retournant un pointeur vers le haut de la pile
 
 /**
 * \fn  void empilerExpression(Expression * cons)
@@ -92,7 +92,9 @@ void Pile::swap(const unsigned int x,const unsigned int y){
 * \param x le nombre d'élements sommés depuis le haut de la pile
 */
 void Pile::sum(unsigned int x){
-   /* \todo implémenter la fonction sum */
+  QVectorIterator<Element*> i(*pile);/*!< Implémentation de QVectorIterator */
+ while (i.hasNext()) /*!< On parcours toutes la pile \todo modifié pour ne prendre que les x premier éléments */
+   i.next();
 }
 
  /**
@@ -100,7 +102,7 @@ void Pile::sum(unsigned int x){
 * \brief Fonction : moyenne des x premiers éléments de la pile
 * \param x le nombre d'élements depuis le haut de la pile sur lesquels on fait la moyenne
 */
-void mean(unsigned int x){
+void Pile::mean(unsigned int x){
     /* \todo implémenter la fonction mean */
 }
 
@@ -108,22 +110,22 @@ void mean(unsigned int x){
 * \fn void clear()
 * \brief Fonction : efface tous les élements de la pile
 */
-void clear(){
-/* \todo implémenter la fonction mean */
+void Pile::clear(){
+pile->clear();
 }
 
 /**
 * \fn  void dup()
 * \brief Fonction : duplique le premier élément de la pile
 */
-void dup(){
-/* \todo implémenter la fonction mean */
+void Pile::dup(){
+/* \todo implémenter la fonction dup */
 }
 
 /**
 * \fn  void drop()
 * \brief Fonction : supprime le premier élément de la pile
 */
-void drop(){
+void Pile::drop(){
 /* \todo implémenter la fonction drop */
 }
