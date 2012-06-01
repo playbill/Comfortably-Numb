@@ -139,5 +139,5 @@ pile->push(e); /*!< on le met sur le haut de la pile */
 * \brief Fonction : supprime le premier élément de la pile
 */
 void Pile::drop(){
-/* \todo implémenter la fonction drop */
+delete pile->pop(); /*!< on enlève l'élement du haut de la pile et on le delete */
 }
