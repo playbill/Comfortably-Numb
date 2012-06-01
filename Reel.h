@@ -10,8 +10,12 @@ class Reel : public Constante{
             float x;
     public:
             Reel(float r):x(r){}
-            virtual QString toQstring()= 0;
-            void afficher(std::ostream& f=std::cout){}
+            virtual QString toQstring();
+            Element* toReel(){return this;} /*!< on retourne un pointeur vers l'objet */
+            virtual Element* toRationnel();
+            virtual Element* toEntier();
+            virtual Element* toComplexe();
+            void afficher(std::ostream& f=std::cout) const;
             Reel& operator+(Constante& c);
             Reel& operator-(Constante& c);
             Reel& operator/(Constante& c);
@@ -21,7 +25,7 @@ class Reel : public Constante{
             Reel& sin();
             Reel& tan();
             Reel& cosh();
-            Reel& singh();
+            Reel& sinh();
             Reel& tanh();
             Reel& ln();
             Reel& log();

@@ -14,6 +14,7 @@
 #define CONSTANTE_H
 
 #include "Element.h"
+#include "Element.h"
 
 class Constante : public Element{
     private:
@@ -21,8 +22,11 @@ class Constante : public Element{
     public:
             Constante();
             virtual ~Constante();
-            Constante(const Constante& c);
             virtual QString toQstring() = 0;
+            virtual Element* toReel() = 0;/*!< /todo quelle retour mettre reel? */
+            virtual Element* toRationnel() = 0; /*! idem */
+            virtual Element* toEntier() = 0; /*! idem */
+            virtual Element* toComplexe() = 0; /*! idem */
             virtual void afficher(std::ostream& f=std::cout) const = 0;
             virtual Constante& operator+(Constante& c) = 0;
             virtual Constante& operator-(Constante& c) = 0;
@@ -41,7 +45,7 @@ class Constante : public Element{
             virtual Constante& sqrt() = 0;
             virtual Constante& sqr() = 0;
             virtual Constante& operator!() = 0;
-            virtual Constante& eval() = 0;
+
 };
 
 

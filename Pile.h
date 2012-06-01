@@ -78,16 +78,16 @@ class Pile{
             * \fn  void sum(int x)
             * \brief Fonction : somme des x premiers éléments de la pile
             * \param x le nombre d'élements sommés depuis le haut de la pile
+            * \deprecated
+            * void sum(unsigned int x);
             */
-            void sum(unsigned int x);
-
             /**
             * \fn void mean(unsigned int x)
             * \brief Fonction : moyenne des x premiers éléments de la pile
             * \param x le nombre d'élements depuis le haut de la pile sur lesquels on fait la moyenne
+            * \deprecated
+            * void mean(unsigned int x);
             */
-            void mean(unsigned int x);
-
             /**
             * \fn void clear()
             * \brief Fonction : efface tous les élements de la pile

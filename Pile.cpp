@@ -94,27 +94,29 @@ void Pile::swap(const unsigned int x,const unsigned int y){
 */
 
 /** Sum dépend du mode dans lequel est configurée la calculatrice
-  On implémentera cette fonction dans la classe Calculateur
-void Pile::sum(unsigned int x){
-  QVectorIterator<Element*> i(*pile);!< Implémentation de QVectorIterator
-  !< On parcours toutes la pile \todo modifié pour ne prendre que les x premier éléments
-  if(Element* sum;
-  do{   
-   sum = sum + *(i.next());
-   while (i.next() != pile->at(x));
-}
+  * On implémentera cette fonction dans la classe Calculateur
+  * \deprecated
+  * void Pile::sum(unsigned int x){
+  * QVectorIterator<Element*> i(*pile);!< Implémentation de QVectorIterator
+  * On parcours toutes la pile \todo modifié pour ne prendre que les x premier éléments
+  * if(Element* sum;
+  * do{
+  * sum = sum + *(i.next());
+  * while (i.next() != pile->at(x));
+  * }
 */
+
 /** Mean dépend du mode dans lequel est configurée la calculatrice
-  On implémentera cete fonction dans la classe Calculateur
-
-* \fn void mean(unsigned int x)
-* \brief Fonction : moyenne des x premiers éléments de la pile
-* \param x le nombre d'élements depuis le haut de la pile sur lesquels on fait la moyenne
-
-void Pile::mean(unsigned int x){
-     \todo implémenter la fonction mean
-}
+  * On implémentera cete fonction dans la classe Calculateur
+  * \deprecated
+  * \fn void mean(unsigned int x)
+  * \brief Fonction : moyenne des x premiers éléments de la pile
+  * \param x le nombre d'élements depuis le haut de la pile sur lesquels on fait la moyenne
+  * void Pile::mean(unsigned int x){
+  * \todo implémenter la fonction mean
+  * }
 */
+
 /**
 * \fn void clear()
 * \brief Fonction : efface tous les élements de la pile
